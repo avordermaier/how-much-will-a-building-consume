@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
-from io import StringIO
-
 import requests
 from pandas.api.types import is_datetime64_any_dtype as is_datetime
 from pandas.api.types import is_categorical_dtype
@@ -348,7 +345,7 @@ if st.checkbox("Exploratory Data Analysis"):
              "*  For steam meter (meter 2), Meter reading after around march is in millions, which is quite bizarre. "
              "Here we will treat it as an outlier and perform and remove it since it could heavily skew our results.")
     st.write("Additionally, we calculate the percentile to see how the meter_reading values compare in the data set.")
-    st.image(image = Image.open('images/percentile_meter_reading.PNG'), caption='Meter_reading percentiles')
+    st.image(image = Image.open('images/percentile_meter_reading.png'), caption='Meter_reading percentiles')
     st.write('**There seems to be a huge outlier in 99th percentile which we know is from building 1099 (meter type 2) '
              'having meter readings in millions.**')
     st.write("How the overall pattern of the meter_reading across all buildings looks like can be easily displayed via "
@@ -423,7 +420,7 @@ if st.checkbox("Exploratory Data Analysis"):
     st.write("## Weather.csv")
     st.write("#### Observation")
     st.write("There are total of 139773 entries and 15 features (with feature engineering). It contains missing values.")
-    st.image(image=Image.open('images/weather_missing_pct.png'), caption='Weather missing values')
+    st.image(image=Image.open('images/weather_missing_pct.PNG'), caption='Weather missing values')
     st.markdown("* There are 7 columns which contains missing values (air_temperature, cloud_coverage dew_temperature, "
                 "precip_depth_1_hr, sea_level_pressure, wind_direction, wind_speed) "
                 "\n * cloud_coverage has around 50% of the values that are "
